@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 568px;
+  height: 320px;
+  justify-content: space-around;
+}
+
+.progress-block {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+}
+
+.bg-circle,
+.progress-circle-value {
+  fill: none;
+  stroke-width: 10;
+}
+
+.bg-circle {
+  stroke: #e6e6e6;
+}
+
+.progress-circle-value {
+  stroke: #2979ff;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.controls input[type="number"] {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.controls input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls input[type="checkbox"]:checked {
+  background-color: #2979ff;
+}
+
+.controls input[type="checkbox"]::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.controls input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .container {
+    flex-direction: row;
+    max-width: 568px;
+    gap: 40px;
+    padding: 40px;
+  }
+  .controls {
+    align-items: flex-start;
+  }
+}
