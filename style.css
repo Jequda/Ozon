@@ -18,24 +18,33 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  width: 568px;
-  height: 320px;
+  width: 320px;
+  height: 568px;
   justify-content: space-around;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
 }
 
 .progress-block {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   position: relative;
 }
 
 .progress-circle {
-  width: 100px;
-  height: 100px;
+  width: 125x;
+  height: 125px;
   transform: rotate(-90deg);
 }
 
@@ -46,7 +55,7 @@ html {
 }
 
 .bg-circle {
-  stroke: #e6e6e6;
+  stroke: #e7e9ff;
 }
 
 .progress-circle-value {
@@ -61,7 +70,6 @@ html {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
 }
 
 .controls label {
@@ -89,10 +97,10 @@ input::-webkit-inner-spin-button {
 
 .controls input[type="checkbox"] {
   appearance: none;
-  width: 40px;
-  height: 20px;
-  background-color: #e6e6e6;
-  border-radius: 10px;
+  width: 45px;
+  height: 26px;
+  background-color: #e7e9ff;
+  border-radius: 20px;
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -104,8 +112,8 @@ input::-webkit-inner-spin-button {
 
 .controls input[type="checkbox"]::before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
@@ -121,8 +129,8 @@ input::-webkit-inner-spin-button {
 @media (min-width: 568px) and (orientation: landscape) {
   .container {
     flex-direction: row;
-    max-width: 568px;
-    gap: 40px;
+    width: 568px;
+    height: 320px;
     padding: 40px;
   }
   .controls {
