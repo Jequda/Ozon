@@ -126,7 +126,7 @@ input::-webkit-inner-spin-button {
   transform: translateX(20px);
 }
 
-@media (min-width: 568px) and (orientation: landscape) {
+@media (min-width: 568px) {
   .container {
     flex-direction: row;
     width: 568px;
